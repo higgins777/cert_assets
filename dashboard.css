@@ -1,0 +1,50 @@
+#aaSTDDashboardStoredDoc .t-Region-header {
+  background-color: #FFF;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDDashboardStoredDoc h2.t-Region-title {
+  color: #1D252C;
+}
+
+#aaSTDCustomRegion .t-Region-header {
+  background-color: #298FC2;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDCustomRegion h2.t-Region-title {
+  color: #FFF;
+}
+
+#aaSTDCustomRegionThree .t-Region-header {
+  background-color: #1D252C;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDCustomRegionThree h2.t-Region-title {
+  color: #FFF;
+}
+
+#aaSTDDashboardDynamicOverview1 .t-Region-header {
+display: none;
+}
+#aaSTDDashboardDynamicOverview1 .t-Region-bodyWrap {
+background-color: #1D252C;
+color: #FFF;
+}
+
+#aaSTDDashboardDynamicOverview2 .t-Region-header {
+  background-color: #FFF;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDDashboardDynamicOverview2 h2.t-Region-title {
+  color: #1D252C;
+}
+
+#aaSTDDashboardDynamicOverview3 .t-Region-header {
+  background-color: #FFF;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDDashboardDynamicOverview3 h2.t-Region-title {
+  color: #1D252C;
+}
+
+/* Widget Header Styles Stop Here */
+
