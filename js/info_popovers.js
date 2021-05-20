@@ -1,5 +1,5 @@
 function popover_content(content) {
-  return '<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content=" ' + content + ' ">Dismissible popover</a>'
+  return '<a tabindex="0" class="btn btn-lg btn-dark" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="popover" data-bs-content=" ' + content + ' "><i class="bi bi-info-circle"></i></a>'
 }
 
 $(document).ready(function() {
