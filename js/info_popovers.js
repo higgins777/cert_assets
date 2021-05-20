@@ -2,7 +2,7 @@ function popover_content(content) {
   return '<a tabindex="0" class="btn btn-lg btn-dark" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="popover" data-bs-content=" ' + content + ' "><i class="bi bi-info-circle"></i></a>'
 }
 
-$(document).ready(function() {
+function add_dashboard_popovers() {
 
   var myProfile = $("#aaSTDDashboardStoredDoc_heading")
   myProfile.append(popover_content("Info about My Profile"))
@@ -24,4 +24,4 @@ $(document).ready(function() {
   announcements.append(popover_content("Info about Announcements"))
   new bootstrap.Popover(announcements.get(0), {html: true})
 
-})
+}
