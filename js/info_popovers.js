@@ -1,5 +1,5 @@
 function popover_content(id, title, content) {
-  return '<a tabindex="0" id="' +id+'" style="margin-left: 5px; font-size: 2.2rem; cursor: hover" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="'+title+'" data-bs-content=" ' + content + ' "><i class="bi bi-info-circle"></i></a>'
+  return '<a tabindex="0" id="' +id+'" style="margin-left: 5px; font-size: 2.2rem; cursor: hover" role="button" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-trigger="focus" title="'+title+'" data-bs-content=" ' + content + ' "><i class="bi bi-info-circle"></i></a>'
 }
 
 function add_dashboard_popovers() {
