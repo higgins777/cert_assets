@@ -9,6 +9,13 @@ blockquote { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-ser
 pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
 
+#CustPhoto {
+  width: 125px;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 125px;
+}
+
 #aaSTDDashboardStoredDoc .t-Region-header {
   background-color: #FFF;
   border-bottom: 1px solid #d6dfe6;
