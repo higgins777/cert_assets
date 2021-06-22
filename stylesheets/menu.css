@@ -1,0 +1,13 @@
+.dropdown-menu {
+  background-color: 1d252c;
+  padding: 20px;
+  min-width: 800px;
+}
+
+.boc-menu-col a {
+  color: white;
+}
+
+.boc-menu-col a:hover {
+  color: white;
+}
