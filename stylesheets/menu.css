@@ -11,3 +11,20 @@
 .boc-menu-col a:hover {
   color: white;
 }
+
+#boc-dropdown-menu {
+  height: 28px;
+}
+
+#boc-dropdown-menu i, span {
+  font-size: 16px !important;
+  vertical-align: top;
+}
+
+#BOCLogout {
+  padding-left: 20px;
+}
+
+#BOCLogout i {
+  line-height: 1.6;
+}

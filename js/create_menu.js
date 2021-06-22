@@ -16,7 +16,7 @@ function create_menu() {
     col1 = menu_sets[1].map(function(v){return v.outerHTML}).join('');
     col2 = menu_sets[2].map(function(v){return v.outerHTML}).join('');
 
-    dropdown_button = '<button class="btn btn-secondary dropdown-toggle" type="button" id="boc-dropdown-menu" data-bs-toggle="dropdown" aria-expanded="false">Dropdown button</button>';
+    dropdown_button = '<button class="btn btn-secondary dropdown-toggle" type="button" id="boc-dropdown-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" id="BOCMenuNavIcon">menu</i><span id="BOCMenuNavIconLabel">Menu</span></button>';
 
     dropdown_content = '<ul class="dropdown-menu" aria-labelledby="boc-dropdown-menu"><li><div class="container"><div class="row"><div id="boc-menu-col0 boc-menu-col" class="col-md-4 col-sm-6"></div><div id="boc-menu-col1 boc-menu-col" class="col-md-4 col-sm-6"></div><div id="boc-menu-col2 boc-menu-col" class="col-md-4 col-sm-6"></div></div></div></li></ul>';
 
