@@ -24,9 +24,15 @@
 }
 
 #BOCLogout {
-  padding-left: 20px;
+  padding-left: 20px !important;
+  display: flex;
+  align-items: center;
 }
 
 #BOCLogout i {
   line-height: 1.6;
+}
+
+#boc-menu-col0, #boc-menu-col-1, #boc-menu-col-2 li {
+  margin-bottom: 3px;
 }
