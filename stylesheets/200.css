@@ -14,11 +14,13 @@
 
 #boc-dropdown-menu {
   height: 28px;
+  display: flex;
+  align-items: center;
 }
 
-#boc-dropdown-menu i, span {
+#BOCMenuNavIconLabel {
   font-size: 16px !important;
-  vertical-align: top;
+  padding-left: 3px;
 }
 
 #BOCLogout {
