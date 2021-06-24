@@ -29,3 +29,6 @@ function create_menu() {
   }
 }
 
+$(function () {
+  create_menu()
+});
