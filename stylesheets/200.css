@@ -33,6 +33,6 @@
   line-height: 1.6;
 }
 
-.boc-menu-col li {
-  margin-bottom: 30px !important;
+.boc-menu-col ul, li {
+  margin-bottom: 3px !important;
 }
