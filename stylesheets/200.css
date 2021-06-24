@@ -33,14 +33,6 @@
   line-height: 1.6;
 }
 
-#boc-menu-col0 li {
-  margin-bottom: 3px !important;
-}
-
-#boc-menu-col-1 li {
-  margin-bottom: 3px !important;
-}
-
-#boc-menu-col-2 li {
+.boc-menu-col li {
   margin-bottom: 3px !important;
 }
