@@ -1,3 +1,10 @@
+select c.level_id
+    from crt_cust_mast c,
+    where c.cust_id = 'BOC391820'
+      and c.cert_ty = 'ATHLETIC_TRAINER'
+      and c.level_id = 'EXAM_ELIGIBLE'
+
+
 select 'Y'
 from dual
 where exists (

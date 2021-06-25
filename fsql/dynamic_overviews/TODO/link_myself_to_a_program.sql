@@ -7,7 +7,7 @@
     Query is running on Candidate Dashboard, confirms I Type
     Query confirms we are a student, would we ever be joined here to anything other than a PS Type
 */
-select '<div class="todo"><a href="https://cert.bocatc.org/bocdevssa/ssaapexmnucall?p_app_id=BOCSSA&p_page_id=2517">Link Myself to a Program/School</a></div>'
+select '<div class="boc-todo-item"><a href="https://cert.bocatc.org/bocdevssa/ssaapexmnucall?p_app_id=BOCSSA&p_page_id=2517">Link Myself to a Program/School</a></div>'
 from dual
 where not exists (
   SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :p_cust_id AND FUNCTION_CD='STUDENT'
