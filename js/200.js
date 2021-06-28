@@ -28,5 +28,5 @@ function create_menu() {
 }
 
 $(function () {
-  create_menu()
+  // create_menu()
 });
