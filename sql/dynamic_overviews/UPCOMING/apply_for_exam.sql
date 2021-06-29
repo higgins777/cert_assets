@@ -3,5 +3,5 @@
 select '<div class="boc-upcoming-item">Apply for Exam<div>'
 from dual
 where not exists (
-  SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :p_cust_id AND FUNCTION_CD='STUDENT'
+  SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :cust_id AND FUNCTION_CD='STUDENT'
 )

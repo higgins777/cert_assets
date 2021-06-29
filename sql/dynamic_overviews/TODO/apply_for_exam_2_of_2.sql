@@ -1,6 +1,5 @@
 -- CUST_ID: 401244
-select '<a href='https://cert.bocatc.org/bocdevssa/sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_APP&p_cust_id=' || :cust_id || ''>Apply for Exam (step 2 of 2)</a>'
-
+select '<a href="https://cert.bocatc.org/bocdevssa/sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_APP&p_cust_id=' || :cust_id || '">Apply for Exam (step 2 of 2)</a>'
 from dual
 where exists (
   SELECT 1

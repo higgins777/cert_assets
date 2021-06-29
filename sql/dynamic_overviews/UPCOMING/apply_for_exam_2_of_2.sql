@@ -2,7 +2,7 @@
 select 'Apply for Exam (step 2 of 2)'
 from dual
 where exists (
-  SELECT *
+  SELECT 1
   FROM SBM_SUBMITTAL s
   INNER JOIN CEN_CUST_EMP e ON s.primary_cust_id=e.employee_id
   WHERE e.employee_id = :cust_id

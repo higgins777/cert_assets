@@ -1,7 +1,7 @@
 select 'Enter/Report CE Activity (50 CEUs Due)'
 from dual
 where exists (
-
+  SELECT 1
   FROM SBM_SUBMITTAL s
     INNER JOIN CRT_CUST_MAST c ON s.primary_cust_id = c.cust_id
     INNER JOIN CRT_CUST_PERIOD p ON s.primary_cust_id = p.cust_id
