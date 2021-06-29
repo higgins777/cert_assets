@@ -3,7 +3,7 @@ select '<a href='https://cert.bocatc.org/bocdevssa/sbmssamysubmittals.display_pa
 
 from dual
 where exists (
-  SELECT *
+  SELECT 1
   FROM SBM_SUBMITTAL s
   INNER JOIN CRT_CUST_MAST m ON m.cust_id=s.primary_cust_id
   WHERE s.primary_cust_id = :cust_id

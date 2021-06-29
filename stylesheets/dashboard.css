@@ -41,10 +41,18 @@ color: #FFF;
 }
 
 #aaSTDDashboardDynamicOverview3 .t-Region-header {
-  background-color: #3B8FC5;
+  background-color: #FFF;
   border-bottom: 1px solid #d6dfe6;
 }
 #aaSTDDashboardDynamicOverview3 h2.t-Region-title {
+  color: #1D252C;
+}
+
+#aaSTDDashboardDynamicOverview4 .t-Region-header {
+  background-color: #3B8FC5;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDDashboardDynamicOverview4 h2.t-Region-title {
   color: #1D252C;
 }
 
