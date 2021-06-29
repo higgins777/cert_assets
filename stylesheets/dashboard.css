@@ -24,22 +24,6 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   color: #1D252C;
 }
 
-#aaSTDDashboardDynamicOverview4 .t-Region-header {
-  background-color: #298FC2;
-  border-bottom: 1px solid #d6dfe6;
-}
-#aaSTDDashboardDynamicOverview4 h2.t-Region-title {
-  color: #FFF;
-}
-
-#aaSTDDashboardDynamicOverview4Three .t-Region-header {
-  background-color: #1D252C;
-  border-bottom: 1px solid #d6dfe6;
-}
-#aaSTDDashboardDynamicOverview4Three h2.t-Region-title {
-  color: #FFF;
-}
-
 #aaSTDDashboardDynamicOverview1 .t-Region-header {
 display: none;
 }
@@ -62,6 +46,14 @@ color: #FFF;
 }
 #aaSTDDashboardDynamicOverview3 h2.t-Region-title {
   color: #1D252C;
+}
+
+#aaSTDDashboardDynamicOverview5 .t-Region-header {
+  background-color: #1D252C;
+  border-bottom: 1px solid #d6dfe6;
+}
+#aaSTDDashboardDynamicOverview5 h2.t-Region-title {
+  color: #FFF;
 }
 
 /* Widget Header Styles Stop Here */
