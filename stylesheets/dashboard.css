@@ -65,15 +65,15 @@ color: #FFF;
 }
 
 .boc-todo-info {
-  font-size: 3rem;
+  font-size: 3rem !important;
   color: #FF8772;
 }
 .boc-todo-date {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #FF8772
 }
 .boc-todo-action {
-  font-size: 3rem;
+  font-size: 1.25rem;
   color: #1D252C
 }
 .boc-todo-row {
