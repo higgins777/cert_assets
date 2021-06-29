@@ -53,7 +53,7 @@ color: #FFF;
   border-bottom: 1px solid #d6dfe6;
 }
 #aaSTDDashboardDynamicOverview4 h2.t-Region-title {
-  color: #1D252C;
+  color: #FFF;
 }
 
 #aaSTDDashboardDynamicOverview5 .t-Region-header {
@@ -62,6 +62,22 @@ color: #FFF;
 }
 #aaSTDDashboardDynamicOverview5 h2.t-Region-title {
   color: #FFF;
+}
+
+.boc-todo-info {
+  font-size: 3rem;
+  color: #FF8772;
+}
+.boc-todo-date {
+  font-size: 2rem;
+  font-color: #FF8772
+}
+.boc-todo-action {
+  font-size: 3rem;
+  font-color: #1D252C
+}
+.boc-todo-row {
+  border-bottom: 1px solid #3B8FC5;
 }
 
 /* Widget Header Styles Stop Here */

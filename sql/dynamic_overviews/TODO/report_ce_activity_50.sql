@@ -1,4 +1,12 @@
-select 'Enter/Report CE Activity (50 CEUs Due)'
+select '<div class="boc-todo-row row">
+  <div class="col s10">
+    <div class="boc-todo-action">Enter/Report CE Activity (25 CEUs Due)</div>
+    <div class="boc-todo-date">12/31/2021</div>
+  </div>
+  <div class="col s2">
+      <i class="boc-todo-info material-icons">info</i>
+  </div>
+</div>'
 from dual
 where exists (
   SELECT 1
