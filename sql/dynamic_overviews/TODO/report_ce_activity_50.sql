@@ -1,10 +1,15 @@
+  
+
+
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">Enter/Report CE Activity (25 CEUs Due)</div>
     <div class="boc-todo-date">12/31/2021</div>
   </div>
   <div class="col s2">
-      <i class="boc-todo-info material-icons">info</i>
+      <a class="btn tooltipped" data-position="bottom" data-tooltip="I am a tooltip">
+        <i class="boc-todo-info material-icons">info</i>
+      </a>
   </div>
 </div>'
 from dual
