@@ -76,6 +76,9 @@ color: #FFF;
   font-size: 1.25rem;
   color: #1D252C
 }
+.boc-todo a {
+  color: #1D252C
+}
 .boc-todo-row {
   border-bottom: 1px solid #3B8FC5;
 }
