@@ -1,6 +1,15 @@
--- AT_REGISTRATION_REASON	BOC_EXAM or null	
--- SSA user (I customer type) DOES NOT HAVE active relationship with program/school record (PS customer type)
-select 'Apply for Exam'
+select '<div class="boc-upcoming-row row">
+  <div class="col s10">
+    <div class="boc-upcoming-action">
+      Apply for Exam
+    </div>
+  </div>
+  <div class="col s2">
+      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+        <i class="boc-upcoming-info material-icons">info</i>
+      </a>
+  </div>
+</div>'
 from dual
 where not exists (
   SELECT 1 

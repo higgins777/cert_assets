@@ -1,5 +1,16 @@
 -- CUST_ID: 401244
-select 'Schedule Exam'
+select '<div class="boc-todo-row row">
+  <div class="col s10">
+    <div class="boc-todo-action">
+      Schedule Exam (review to email from Scantron)
+    </div>
+  </div>
+  <div class="col s2">
+      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+        <i class="boc-todo-info material-icons">info</i>
+      </a>
+  </div>
+</div>'
 from dual
 where exists (
   SELECT 1

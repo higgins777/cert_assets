@@ -1,5 +1,18 @@
 -- CUST_ID: 401244
-select '<a href="www.example.com">Apply for Exam (step 1 of 2)</a>'
+select '<div class="boc-todo-row row">
+  <div class="col s10">
+    <div class="boc-todo-action">
+      <a href="https://cert.bocatc.org/bocdevssa/sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_APP&p_cust_id=' || :cust_id || '">Apply for Exam (step 1 of 2)</a>
+    </div>
+    <div class="boc-todo-date">
+    </div>
+  </div>
+  <div class="col s2">
+      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+        <i class="boc-todo-info material-icons">info</i>
+      </a>
+  </div>
+</div>'
 from dual
 where exists (
   SELECT *

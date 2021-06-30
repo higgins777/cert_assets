@@ -1,6 +1,17 @@
 -- WKF_INSTANCE has the current state
 -- 401331
-select 'Register for Exam'
+select '<div class="boc-todo-row row">
+  <div class="col s10">
+    <div class="boc-todo-action">
+      <a href="https://cert.bocatc.org/bocdevssa/sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_EXAM&p_cust_id=' || :cust_id || '">Register for Exam</a>
+    </div>
+  </div>
+  <div class="col s2">
+      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+        <i class="boc-todo-info material-icons">info</i>
+      </a>
+  </div>
+</div>'
 from dual
 where exists (
   SELECT 1

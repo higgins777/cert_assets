@@ -83,5 +83,25 @@ color: #FFF;
   border-bottom: 1px solid #3B8FC5;
 }
 
+
+.boc-todo-info {
+  font-size: 3rem !important;
+  color: #FF8772;
+}
+.boc-todo-date {
+  font-size: 1rem;
+  color: #CDC5A7
+}
+.boc-todo-action {
+  font-size: 1.25rem;
+  color: #1D252C
+}
+.boc-todo-action a {
+  color: #1D252C !important
+}
+.boc-todo-row {
+  border-bottom: 1px solid #1D252C;
+}
+
 /* Widget Header Styles Stop Here */
 

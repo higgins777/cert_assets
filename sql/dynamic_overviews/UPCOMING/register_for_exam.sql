@@ -1,6 +1,15 @@
--- WKF_INSTANCE has the current state
--- 401331
-select 'Register for Exam'
+select '<div class="boc-upcoming-row row">
+  <div class="col s10">
+    <div class="boc-upcoming-action">
+      Register for Exam
+    </div>
+  </div>
+  <div class="col s2">
+      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+        <i class="boc-upcoming-info material-icons">info</i>
+      </a>
+  </div>
+</div>'
 from dual
 where exists (
   SELECT *
