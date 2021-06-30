@@ -84,22 +84,22 @@ color: #FFF;
 }
 
 
-.boc-todo-info {
+.boc-upcoming-info {
   font-size: 3rem !important;
   color: #FF8772;
 }
-.boc-todo-date {
+.boc-upcoming-date {
   font-size: 1rem;
   color: #CDC5A7
 }
-.boc-todo-action {
+.boc-upcoming-action {
   font-size: 1.25rem;
   color: #1D252C
 }
-.boc-todo-action a {
+.boc-upcoming-action a {
   color: #1D252C !important
 }
-.boc-todo-row {
+.boc-upcoming-row {
   border-bottom: 1px solid #1D252C;
 }
 
