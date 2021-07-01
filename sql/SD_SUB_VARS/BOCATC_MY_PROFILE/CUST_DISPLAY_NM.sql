@@ -1,0 +1,1 @@
+select display_nm from cen_cust_mast m, cen_cust_login l where m.cust_id = :p_cust_id and :p_cust_id is not null and m.cust_id = l.cust_id and l.hash_cd is not null

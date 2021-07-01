@@ -1,13 +1,12 @@
--- CUST_ID: 401244
-select '<div class="boc-todo-row row">
+select '<div class="boc-upcoming-row row">
   <div class="col s10">
-    <div class="boc-todo-action">
-      'Apply for Exam (step 2 of 2)'
+    <div class="boc-upcoming-action">
+      Apply for Exam (step 2 of 2)
     </div>
   </div>
   <div class="col s2">
       <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
-        <i class="boc-todo-info material-icons">info</i>
+        <i class="boc-upcoming-info material-icons">info</i>
       </a>
   </div>
 </div>'
