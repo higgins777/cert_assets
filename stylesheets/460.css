@@ -29,6 +29,12 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   text-align: left;
 }
 
+.displayMenuNavLinks li:hover {
+  background-color: #1D252C !important;
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+}
+
 .boc-menu-col {
   float: left;
   min-height: 1px;
