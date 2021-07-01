@@ -11,9 +11,9 @@ function create_menu() {
   var menu_items = $("#BOCMenuNavLinks li")
   var top_ul = $("#BOCMenuNavLinks ul").first()
   
-  const half = Math.ceil(list.length / 2);
-  const firstHalf = list.slice(0, half)
-  const secondHalf = list.slice(-half)
+  const half = Math.ceil(menu_items.length / 2);
+  const firstHalf = menu_items.slice(0, half)
+  const secondHalf = menu_items.slice(-half)
 
   if (firstHalf.length > 0) {
     top_ul.html("<div id='boc-menu-col' class='boc-menu-col'></div><div id='boc-menu-col1' class='boc-menu-col'></div>")
@@ -21,7 +21,3 @@ function create_menu() {
     $("#boc-menu-col1").html(secondHalf);
   }
 }
-
-$(function () {
-  create_menu()
-});
