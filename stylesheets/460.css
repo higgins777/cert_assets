@@ -21,18 +21,14 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 }
 
 .displayMenuNavLinks a {
-  display: block;
-  font-size: 18px !important;
-  font-weight: 900 !important;
   color: white !important;
-  margin: 5px 0px !important;
-  text-align: left;
 }
+
 
 .displayMenuNavLinks li:hover {
   background-color: #1D252C !important;
-  opacity: 0.8 !important;
-  text-decoration: underline !important;
+  /* opacity: 0.8 !important;
+  text-decoration: underline !important; */
 }
 
 .boc-menu-col {
