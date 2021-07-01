@@ -2,9 +2,9 @@ $(document).ajaxComplete(function () {
   $("[id^=COL18_]").text("Completion Date");
   $("[id^=COL19_]").text("CEUs");
 
-  // var page_link = $(".aaActive").first()
-  // if (page_link.length == 1) {
-  //   var page_title = $(".aaActive").first().children().text()
-  //   $("#aaCENTransactionReportsRegion_heading").text(page_title)
-  // }
+  var page_link = $(".aaActive").first()
+  if (page_link.length == 1) {
+    var page_title = $(".aaActive").first().children().text()
+    $("#aaCENTransactionReportsRegion_heading").text(page_title)
+  }
 });
