@@ -8,6 +8,27 @@ blockquote { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-ser
 
 pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
+/* Start Menu CSS */
+.displayMenuNavLinks {
+  display: block !important;
+  background-color: white;
+  position: fixed !important;
+  z-index: 999;
+  border: 1px solid #d6dfe6;
+  width: 600px;
+  font-size: 14px !important;
+  right: 300px;
+}
+
+.boc-menu-col {
+  float: left;
+  min-height: 1px;
+  position: relative;
+  padding-right: 4px;
+  padding-left: 4px;
+  width: 50%;
+}
+/* End Menu CSS */
 
 #CustPhoto {
   width: 125px;
