@@ -16,7 +16,7 @@ function create_menu() {
   const secondHalf = menu_items.slice(-half)
 
   if (firstHalf.length > 0) {
-    top_ul.html("<div id='boc-menu-col' class='boc-menu-col'></div><div id='boc-menu-col1' class='boc-menu-col'></div>")
+    top_ul.html("<div id='boc-menu-col0' class='boc-menu-col'></div><div id='boc-menu-col1' class='boc-menu-col'></div>")
     $("#boc-menu-col0").html(firstHalf);
     $("#boc-menu-col1").html(secondHalf);
   }

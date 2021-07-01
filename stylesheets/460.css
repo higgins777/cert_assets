@@ -15,9 +15,9 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   position: fixed !important;
   z-index: 999;
   border: 1px solid #d6dfe6;
-  width: 600px;
+  width: 600px !important;
   font-size: 14px !important;
-  right: 300px;
+  right: 300px !important;
 }
 
 .boc-menu-col {
