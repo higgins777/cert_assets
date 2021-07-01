@@ -1,3 +1,38 @@
+
+
+/* Start Menu CSS */
+.displayMenuNavLinks {
+  display: block !important;
+  background-color: #1D252C !important;
+  position: fixed !important;
+  z-index: 999;
+  border: 1px solid #d6dfe6;
+  width: 650px !important;
+  font-size: 14px !important;
+  right: 250px !important;
+}
+
+.displayMenuNavLinks a {
+  color: white !important;
+}
+
+
+.displayMenuNavLinks li:hover {
+  background-color: #1D252C !important;
+  /* opacity: 0.8 !important;
+  text-decoration: underline !important; */
+}
+
+.boc-menu-col {
+  float: left;
+  min-height: 1px;
+  position: relative;
+  padding-right: 4px;
+  padding-left: 4px;
+  width: 50%;
+}
+/* End Menu CSS */
+
 .dropdown-menu {
   background-color: #1d252c !important;
   padding: 20px !important;
