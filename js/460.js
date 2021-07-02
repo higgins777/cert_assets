@@ -5,10 +5,10 @@ $(document).ready(function(){
 });
 
 function add_dashboard_class() {
-  var uri = window.location.href;
-  if (uri.includes('BOCATDASH')) {
+  var dashboard_id = $("#DASHBOARD-ID").text()
+  if (dashboard_id == 'AT-DASHBOARD') {
     $("#section-header").addClass("at-dashboard-container")
-  } else if (uri.includes('BOCAPDASH')) {
+  } else {
     $("#section-header").addClass("ap-dashboard-container")
   }
 }
