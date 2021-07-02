@@ -80,7 +80,11 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 .ap-dashboard-container #aaSTDDashboardDynamicOverview2 .t-Region-header {
   display: none
 }
-.ap-dashboard-container #aaSTDDashboardDynamicOverview2 h2.t-Region-bodyWrap {
+.ap-dashboard-container #aaSTDDashboardDynamicOverview2 .t-Region-bodyWrap {
+  background-color: #1D252C;
+  color: #FFF;
+}
+.ap-dashboard-container #aaSTDDashboardDynamicOverview2 .t-Region-bodyWrap a {
   background-color: #1D252C;
   color: #FFF;
 }

@@ -9,7 +9,7 @@ select '<div class="boc-todo-row row">
     </div>
   </div>
   <div class="col s2">
-      <a class="tooltipped" data-position="bottom" data-tooltip="Link Myself to a Provider Account">
+      <a class="tooltipped" data-position="bottom" data-tooltip="Verify My Contact Info">
         <i class="boc-todo-info material-icons">info</i>
       </a>
   </div>
