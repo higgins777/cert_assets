@@ -87,8 +87,9 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   border-bottom: 1px solid #d6dfe6;
 }
 .ap-dashboard-container #aaSTDDashboardDynamicOverview1 h2.t-Region-title {
-  color: #1D252C;
+  color: #FFF;
 }
+
 .ap-dashboard-container #aaSTDDashboardDynamicOverview2 .t-Region-header {
   display: none
 }
