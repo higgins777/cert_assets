@@ -26,11 +26,11 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 }
 
 .at-dashboard-container #aaSTDDashboardDynamicOverview1 .t-Region-header {
-display: none;
+  display: none;
 }
 .at-dashboard-container #aaSTDDashboardDynamicOverview1 .t-Region-bodyWrap {
-background-color: #1D252C;
-color: #FFF;
+  background-color: #1D252C;
+  color: #FFF;
 }
 
 .at-dashboard-container #aaSTDDashboardDynamicOverview2 .t-Region-header {
@@ -66,6 +66,14 @@ color: #FFF;
 }
 
 /* PROVIDER DASHBOARD START*/
+.ap-dashboard-container #aaSTDDashboardDynamicOverview .t-Region-header {
+  background-color: #3B8FC5;
+  border-bottom: 1px solid #d6dfe6;
+}
+.ap-dashboard-container #aaSTDDashboardDynamicOverview h2.t-Region-title {
+  color: #FFF;
+}
+
 .ap-dashboard-container #aaSTDDashboardDynamicOverview5 .t-Region-header {
   background-color: #FFF;
   border-bottom: 1px solid #d6dfe6;
@@ -74,11 +82,24 @@ color: #FFF;
   color: #1D252C;
 }
 
-/*PROVIDER DASHBOARD END */
+.ap-dashboard-container #aaSTDDashboardDynamicOverview1 .t-Region-header {
+  background-color: #1D252C;
+  border-bottom: 1px solid #d6dfe6;
+}
+.ap-dashboard-container #aaSTDDashboardDynamicOverview1 h2.t-Region-title {
+  color: #1D252C;
+}
+.ap-dashboard-container #aaSTDDashboardDynamicOverview2 .t-Region-header {
+  display: none
+}
+.ap-dashboard-container #aaSTDDashboardDynamicOverview2 h2.t-Region-title {
+  background-color: #1D252C;
+  color: #FFF;
+}
+/* PROVIDER DASHBOARD END */
 
 
-
-
+/* GENERAL TODO/UPCOMING STYLES START */
 .boc-todo-info {
   font-size: 3rem !important;
   color: #FF8772;
@@ -115,3 +136,4 @@ color: #FFF;
 .boc-upcoming-row {
   border-bottom: 1px solid #1D252C;
 }
+/* GENERAL TODO/UPCOMING STYLES END */
