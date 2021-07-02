@@ -16,6 +16,7 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   height: 125px;
 }
 
+
 .at-dashboard-container #aaSTDDashboardStoredDoc .t-Region-header {
   background-color: #FFF;
   border-bottom: 1px solid #d6dfe6;
@@ -64,6 +65,20 @@ color: #FFF;
   color: #FFF;
 }
 
+/* PROVIDER DASHBOARD START*/
+.ap-dashboard-container #aaSTDDashboardDynamicOverview5 .t-Region-header {
+  background-color: #FFF;
+  border-bottom: 1px solid #d6dfe6;
+}
+.ap-dashboard-container #aaSTDDashboardDynamicOverview5 h2.t-Region-title {
+  color: #1D252C;
+}
+
+/*PROVIDER DASHBOARD END */
+
+
+
+
 .boc-todo-info {
   font-size: 3rem !important;
   color: #FF8772;
@@ -82,8 +97,6 @@ color: #FFF;
 .boc-todo-row {
   border-bottom: 1px solid #3B8FC5;
 }
-
-
 .boc-upcoming-info {
   font-size: 3rem !important;
   color: #FF8772;
@@ -102,6 +115,3 @@ color: #FFF;
 .boc-upcoming-row {
   border-bottom: 1px solid #1D252C;
 }
-
-/* Widget Header Styles Stop Here */
-
