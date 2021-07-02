@@ -16,7 +16,6 @@
   color: white !important;
 }
 
-
 .displayMenuNavLinks li:hover {
   background-color: #1D252C !important;
   /* opacity: 0.8 !important;
@@ -30,33 +29,12 @@
   padding-right: 4px;
   padding-left: 4px;
   width: 50%;
+  
+}
+.boc-menu-col li {
+  margin-bottom: 5px !important;
 }
 /* End Menu CSS */
-
-.dropdown-menu {
-  background-color: #1d252c !important;
-  padding: 20px !important;
-  min-width: 800px !important;
-}
-
-.boc-menu-col a {
-  color: white;
-}
-
-.boc-menu-col a:hover {
-  color: white;
-}
-
-#boc-dropdown-menu {
-  height: 28px;
-  display: flex;
-  align-items: center;
-}
-
-#BOCMenuNavIconLabel {
-  font-size: 16px !important;
-  padding-left: 3px;
-}
 
 #BOCLogout {
   padding-left: 20px !important;
@@ -68,6 +46,6 @@
   line-height: 1.6;
 }
 
-.boc-menu-col li {
-  margin-bottom: 5px !important;
-}
+/* Start AT Dashboard */
+
+/* End AT Dashboard */
