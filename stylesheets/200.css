@@ -23,10 +23,10 @@
 }
 
 .boc-menu-col {
-  float: left;
-  min-height: 1px;
-  position: relative;
-  width: 50%;
+  float: left !important;
+  min-height: 1px !important;
+  position: relative !important;
+  width: 50% !important;;
   
 }
 .boc-menu-col li {
