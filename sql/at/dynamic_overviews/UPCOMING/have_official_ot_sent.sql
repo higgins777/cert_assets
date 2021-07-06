@@ -22,7 +22,7 @@ where exists (
     AND m.cert_ty = 'ATHLETIC_TRAINER'
     AND m.level_id IN ('EXAM_ELIGIBLE')
     AND tx.category_cd = 'TRANSCRIPT'
-    AND tx.level_1 = 'OFFICIAL'
+    AND tx.level1 = 'OFFICIAL'
     AND tx.status_cd = 'Approved'
 )
 

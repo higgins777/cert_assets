@@ -17,7 +17,7 @@ from dual
 where exists (
   SELECT 1
   FROM CRT_CUST_MAST m
-  INNER JOIN SBM_SUBMITTALS s ON m.cust_id=s.primary_cust_id
+  INNER JOIN SBM_SUBMITTAL s ON m.cust_id=s.primary_cust_id
   WHERE m.cust_id = :cust_id
     AND m.cert_ty = 'ATHLETIC_TRAINER'
     AND m.level_id IN ('CERTIFICATION_ELIGIBLE')

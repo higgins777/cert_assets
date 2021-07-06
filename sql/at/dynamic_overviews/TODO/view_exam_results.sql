@@ -21,3 +21,4 @@ where exists (
   WHERE m.cust_id = :cust_id
     AND m.cert_ty = 'ATHLETIC_TRAINER'
     AND SYSDATE < (cencustlib.get_cust_attrdtl_dvar(p_cust_id => 'BOCATC', p_attribute_ty => 'EXAM_POSTED_DATE', p_attribute_cd => 'EXAM_POSTED_DATE') + 30)
+)

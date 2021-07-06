@@ -16,7 +16,7 @@ select '<div class="boc-todo-row row">
 from dual
 where exists (
   SELECT 1
-  FROM SBM_SUBMITTALS s
+  FROM SBM_SUBMITTAL s
   WHERE s.primary_cust_id = :cust_id
     AND s.collection_id = 'AT_ECC_APP'
     AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('NMI')
