@@ -10,9 +10,9 @@ select '<div class="boc-todo-row row">
     </div>
   </div>
   <div class="col s2">
-      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+      <!-- <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
         <i class="boc-todo-info material-icons">info</i>
-      </a>
+      </a> -->
   </div>
 </div>'
 from dual
@@ -24,6 +24,7 @@ where exists (
   WHERE m.cust_id = :cust_id
     AND s.collection_id = 'AT_EXAM_APP'
     AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('EXAM_REGISTERED', NULL)
-    AND m.cert_ty = 'ATHLETIC_TRAINER'
-    AND m.level_id = 'EXAM_ELIGIBLE'
-    AND m.start_dt < cencustlib.get_cust_attrdtl_dvar(p_cust_id => 'BOCATC', p_attribute_ty => 'AT_ELIGIBILITY_CLOSED', p_attribute_cd => 'AT_ELIGIBILITY_CLOSED')
+    AND p.cert_ty = 'ATHLETIC_TRAINER'
+    AND p.level_id = 'EXAM_ELIGIBLE'
+    AND p.start_dt < cencustlib.get_cust_attrdtl_dvar(p_cust_id => 'BOCATC', p_attribute_ty => 'AT_ELIGIBILITY_CLOSED', p_attribute_cd => 'AT_ELIGIBILITY_CLOSED')
+)

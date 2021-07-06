@@ -1,4 +1,3 @@
--- CUST_ID: 401244
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">

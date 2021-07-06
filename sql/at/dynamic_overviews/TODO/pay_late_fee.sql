@@ -1,4 +1,3 @@
-
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
@@ -9,9 +8,9 @@ select '<div class="boc-todo-row row">
     </div>
   </div>
   <div class="col s2">
-      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+      <!-- <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
         <i class="boc-todo-info material-icons">info</i>
-      </a>
+      </a> -->
   </div>
 </div>'
 from dual

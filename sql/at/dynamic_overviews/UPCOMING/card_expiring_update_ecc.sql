@@ -9,9 +9,9 @@ select '<div class="boc-todo-row row">
     </div>
   </div>
   <div class="col s2">
-      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+      <!-- <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
         <i class="boc-todo-info material-icons">info</i>
-      </a>
+      </a> -->
   </div>
 </div>'
 from dual
@@ -28,4 +28,3 @@ where exists (
     AND s.collection_id = 'AT_ECC_APP'
     AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('APPROVED')
 )
-
