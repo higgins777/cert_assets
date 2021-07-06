@@ -40,7 +40,7 @@ and not exists (select 'Open Invoice'
                 from acgiapps.ar_vw_rct_invbalance ar
                where ar.billto_cust_id = bocdashboardlib.get_provider(:cust_id)
                  and ar.product_area = 'MEM'
-                 and ar.balance > 0)                
+                 and ar.balance > 0)
 and NOT exists (select 'X' 
                 from sbm_submittal s
                where s.parent_cust_id = bocdashboardlib.get_provider(:cust_id)
