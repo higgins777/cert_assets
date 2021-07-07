@@ -10,9 +10,9 @@ select '<div class="boc-todo-row row">
     </div>
   </div>
   <div class="col s2">
-      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
-        <i class="boc-todo-info material-icons">info</i>
-      </a>
+    <!-- <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+      <i class="boc-todo-info material-icons">info</i>
+    </a> -->
   </div>
 </div>'
 from dual

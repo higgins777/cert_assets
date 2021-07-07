@@ -5,9 +5,9 @@ select '<div class="boc-upcoming-row row">
     </div>
   </div>
   <div class="col s2">
-      <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
+      <!-- <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
         <i class="boc-upcoming-info material-icons">info</i>
-      </a>
+      </a> -->
   </div>
 </div>'
 from dual
@@ -20,5 +20,3 @@ where exists (
   AND e.function_cd = 'STUDENT'
   AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('PENDING','PROGRAM_CONFIRM','BOC_CONFIRM','BOC_CONFIRM_NMI', NULL)
 )
-
-
