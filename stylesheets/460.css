@@ -108,6 +108,10 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   color: #1D252C;
 }
 
+.upcoming-programs-header {
+  color: #FFF;
+  font-size: 16px;
+}
 
 /* PROVIDER DASHBOARD END */
 

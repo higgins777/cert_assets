@@ -1,5 +1,5 @@
 select '<div class="boc-left-nav">
-  <a target="_blank" href="/f?p=STDSSA:1000:12327616278413::::G_CUST_ID:BOC391820#?p_cust_id=BOC391820">
+  <a target="_blank" href="/boccertcardpdf.generate_cert?p_cust_id=BOC122903&p_cust_id=BOC122903">
     My BOC Certification Card
   </a>
 </div>'
