@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  redirect_primary_aps();
   $('.tooltipped').tooltip();
   $('select').formSelect();
   add_dashboard_class();
