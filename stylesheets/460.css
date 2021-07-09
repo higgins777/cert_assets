@@ -8,8 +8,8 @@ blockquote { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-ser
 
 pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
-.select-dropdown {
-  width: 100%;
+.ap-dashboard select-dropdown {
+  width: 100% !important;
 }
 
 #BOCProviderProfile_Provider_ID {
