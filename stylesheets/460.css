@@ -113,6 +113,13 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   font-size: 16px;
 }
 
+.upcoming-programs-header {
+  margin-left: 10px;
+}
+
+.upcoming-program-icon {
+  font-size: 16px;
+}
 /* PROVIDER DASHBOARD END */
 
 
