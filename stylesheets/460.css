@@ -19,7 +19,6 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   height: 125px;
 }
 
-
 .at-dashboard-container #aaSTDDashboardStoredDoc .t-Region-header {
   background-color: #FFF;
   border-bottom: 1px solid #d6dfe6;
@@ -145,5 +144,9 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 }
 .boc-upcoming-row {
   border-bottom: 1px solid #1D252C;
+}
+.boc-left-nav a {
+  font-size: 1.25rem;
+  color: #FFFFFF !important
 }
 /* GENERAL TODO/UPCOMING STYLES END */

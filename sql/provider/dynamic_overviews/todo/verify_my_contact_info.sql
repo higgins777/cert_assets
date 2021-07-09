@@ -14,7 +14,7 @@ select '<div class="boc-todo-row row">
       </a>
   </div>
 </div>'
-from dual
-where not exists (select 'Recently Updated'
-                    from dual
-                   where cencustlib.get_cust_attrdtl_dvar(p_cust_id => :cust_id, p_attribute_ty => 'LAST_PROFILE_UPDATE', p_attribute_cd => 'LAST_PROFILE_UPDATE') >= trunc(sysdate) - 90)
+  from dual
+  where not exists (select 'Recently Updated'
+  from dual
+  where cencustlib.get_cust_attrdtl_dvar(p_cust_id => :cust_id, p_attribute_ty => 'LAST_PROFILE_UPDATE', p_attribute_cd => 'LAST_PROFILE_UPDATE') >= trunc(sysdate) - 90)
