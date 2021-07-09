@@ -19,3 +19,4 @@ function create_menu() {
     $("#boc-menu-col1").html(secondHalf);
   }
 }
+
