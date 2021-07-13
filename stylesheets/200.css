@@ -14,6 +14,7 @@
 
 .displayMenuNavLinks a {
   color: white !important;
+  font-size: 1.6rem;
 }
 
 .displayMenuNavLinks li:hover {
