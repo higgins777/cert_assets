@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.tooltipped').tooltip();
+  // $('.tooltipped').tooltip();
   $('select').formSelect();
   add_dashboard_class();
 });
