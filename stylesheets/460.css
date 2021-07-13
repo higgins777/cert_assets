@@ -129,12 +129,12 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   color: #FF8772;
 }
 .boc-todo-date {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #FF8772;
   padding: 10px
 }
 .boc-todo-action {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   padding: 10px;
   color: #1D252C
 }
@@ -153,7 +153,7 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   color: #CDC5A7
 }
 .boc-upcoming-action {
-  font-size: 1.75rem;
+  font-size: 1.3rem;
   padding: 10px;
   color: #1D252C
 }
