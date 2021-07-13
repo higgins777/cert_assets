@@ -151,7 +151,8 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   color: #CDC5A7
 }
 .boc-upcoming-action {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
+  padding: 10px;
   color: #1D252C
 }
 .boc-upcoming-action a {
