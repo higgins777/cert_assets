@@ -1,6 +1,6 @@
 $(document).ready(function(){
   // $('.tooltipped').tooltip();
-  $('select').formSelect();
+  // $('select').formSelect();
   add_dashboard_class();
 });
 
