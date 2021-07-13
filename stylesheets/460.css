@@ -129,8 +129,9 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   color: #FF8772;
 }
 .boc-todo-date {
-  font-size: 1rem;
-  color: #FF8772
+  font-size: 1.5rem;
+  color: #FF8772;
+  padding: 10px
 }
 .boc-todo-action {
   font-size: 1.75rem;
@@ -162,8 +163,12 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 .boc-upcoming-row {
   border-bottom: 1px solid #1D252C;
 }
+
+.boc-left-nav {
+  padding: 8px;
+}
 .boc-left-nav a {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: #FFFFFF !important
 }
 /* GENERAL TODO/UPCOMING STYLES END */
