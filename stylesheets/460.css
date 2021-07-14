@@ -91,6 +91,9 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
   background-color: #1D252C;
   color: #FFF;
 }
+.ap-dashboard-container #aaSTDDashboardDynamicOverview2 li {
+  color: #FFF;
+}
 
 .ap-dashboard-container #aaSTDDashboardDynamicOverview3 .t-Region-header {
   background-color: #3B8FC5;
