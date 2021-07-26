@@ -4,13 +4,13 @@ select '<div class="boc-left-nav">
   </a>
 </div>'
 from dual
-where exists (
-  SELECT 1
-  FROM CEN_CUST_TX tx
-  WHERE tx.cust_id = :cust_id
-    AND tx.level1 IN ('ATHLETIC_TRAINER', 'BOC_AT')
-    AND tx.CATEGORY_CD = 'EXAM_SCANTRON'
-)
+-- where exists (
+--   SELECT 1
+--   FROM CEN_CUST_TX tx
+--   WHERE tx.cust_id = :cust_id
+--     AND tx.level1 IN ('ATHLETIC_TRAINER', 'BOC_AT')
+--     AND tx.CATEGORY_CD = 'EXAM_SCANTRON'
+-- )
 
 -- https%3A%2F%2Fat.bocatc.org%2Fusr%2Fssos_controller%2Fauth_sso%3Fp_aa_token%3D__AUTHTOKEN__%26route%3Dto_exam_attempts
 

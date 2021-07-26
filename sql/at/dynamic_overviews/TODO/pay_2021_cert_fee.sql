@@ -1,10 +1,10 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      Pay 2021 Cert Maintenance Fee
+      Pay Late Fee
     </div>
     <div class="boc-todo-date">
-      Payment deadline: 12/31/2021 11:59pm CT
+      Payment deadline: 02/28/2022 11:59pm CT
     </div>
   </div>
   <div class="col s2">
@@ -19,5 +19,5 @@ where exists (
   FROM CRT_CUST_MAST m
   WHERE m.cust_id = :cust_id
     AND m.cert_ty = 'ATHLETIC_TRAINER'
-    AND m.level_id IN ('EXPIRED_REACTIVATE', 'CERTIFIED')
+    AND m.level_id IN ('EXPIRED_REACTIVATE')
 )

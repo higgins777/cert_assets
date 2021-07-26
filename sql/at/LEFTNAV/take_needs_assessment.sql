@@ -6,11 +6,12 @@ select '<div class="boc-left-nav">
 from dual
 where exists (
   SELECT 1
-  FROM CEN_CUST_TX tx
-  WHERE tx.cust_id = :cust_id
-    AND tx.level1 IN ('ATHLETIC_TRAINER', 'BOC_AT')
-    AND tx.CATEGORY_CD = 'EXAM_SCANTRON'
+  FROM CRT_CUST_MAST m
+  WHERE m.cust_id = :cust_id
+    AND m.cert_ty = 'ATHLETIC_TRAINER'
+    AND m.level_id IN ('CERTIFIED')
 )
+
 
 -- https%3A%2F%2Fat.bocatc.org%2Fusr%2Fssos_controller%2Fauth_sso%3Fp_aa_token%3D__AUTHTOKEN__%26route%3Dto_exam_attempts
 

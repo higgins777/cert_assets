@@ -20,3 +20,10 @@ where exists (
   AND s.collection_id = 'AT_INITIAL_APP'
   AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('IN_PROCESS', 'CHECKOUT', 'AWAITING_PAYMENT')
 )
+ OR EXISTS (
+  SELECT 1
+  FROM CRT_CUST_MAST ccm
+  WHERE ccm.cust_id = :cust_id
+  AND ccm.cert_ty='ATHLETIC_TRAINER'
+  AND ccm.level_id = 'EXAM_ELIGIBLE_EXPIRED'
+)

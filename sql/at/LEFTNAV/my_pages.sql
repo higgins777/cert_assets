@@ -6,3 +6,9 @@
 https://cert.bocatc.org/bocssa/f?p=STDSSA:1000:4226859305841:::1000:P1000_DASHBOARD_CD,G_CUST_ID:BOCATDASH,BOC391820
 
 https://cert.bocatc.org/bocssa/f?p=STDSSA:1000:4226859305841:::1000:P1000_DASHBOARD_CD,G_CUST_ID:BOCAPDASH,IND-177056
+
+Switch to Personal Profile
+
+Switch to Provider Profile
+
+Stored Doc with other link is Chat Footer (or something like that)

@@ -1,10 +1,11 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      Pay Late Fee
+      <a href="sbmssamysubmittals.display_page?p_collection_id=AT_REINSTATE_APP&p_cust_id=' || :cust_id || '">
+        Reinstate Your Certification
+      </a>
     </div>
     <div class="boc-todo-date">
-      Payment deadline: 02/28/2022 11:59pm CT
     </div>
   </div>
   <div class="col s2">

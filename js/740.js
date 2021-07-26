@@ -1,4 +1,5 @@
 $(document).ajaxComplete(function () {
+  $("[id^=COL10_]").text("Documentation");
   $("[id^=COL18_]").text("Completion Date");
   $("[id^=COL19_]").text("CEUs");
 

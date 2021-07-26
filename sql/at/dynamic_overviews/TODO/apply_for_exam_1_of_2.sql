@@ -13,12 +13,21 @@ select '<div class="boc-todo-row row">
   </div>
 </div>'
 from dual
-where exists (
-  SELECT *
+where not exists (
+  SELECT 1
+  FROM CRT_CUST_MAST ccm
+  WHERE ccm.cust_id = :cust_id
+)
+AND EXISTS (
+  SELECT 1 FROM CEN_CUST_ATTRDTL cca
+  WHERE cca.cust_id=:cust_id
+  AND cca.ATTRIBUTE_TY = 'AT_REGISTRATION_REASON' 
+  AND cca.ATTRIBUTE_CD = 'BOC_EXAM'
+) 
+AND NOT EXISTS (
+  SELECT 1
   FROM SBM_SUBMITTAL s
-  INNER JOIN CEN_CUST_EMP e ON s.primary_cust_id=e.employee_id
-  WHERE e.employee_id = :cust_id
+  WHERE s.primary_cust_id = :cust_id
   AND s.collection_id = 'AT_INITIAL_APP'
-  AND e.function_cd = 'STUDENT'
-  AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('PENDING', NULL)
+  AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('IN_PROCESS', 'CHECKOUT', 'AWAITING_PAYMENT')
 )
