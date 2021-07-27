@@ -2,7 +2,7 @@ $(document).ajaxComplete(function () {
   $("[id^=COL10_]").text("Documentation");
 
   if ($( ".t-Region-title:contains('ECC Documentation')" ).length > 0) {
-    $("[id^=COL17_]").text("Issue Date");
+    $("[id^=COL17_]").text("Issued Date");
     $("[id^=COL18_]").text("Expiration Date");
   } else {
     $("[id^=COL18_]").text("Completion Date");
