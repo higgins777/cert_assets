@@ -1,5 +1,7 @@
 $(document).ready(function(){
   create_menu()
+  replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2020', ' December 31, 2021')
+  replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2020', '12/31/2021')
 });
 
 function create_menu() {
@@ -18,5 +20,15 @@ function create_menu() {
     $("#boc-menu-col0").html(firstHalf);
     $("#boc-menu-col1").html(secondHalf);
   }
+
 }
 
+
+// Searches for a containerType that has the mustHaveStr, and then replaces all targetStr with newStr
+// YOU MUST USE TWO SELECTORS TO FIND THE LOWEST ELEMENT CONTAINING BOTH THE mustHaveStr and targetStr
+function replaceElementsStr(containerType, mustHaveStr, targetStr, newStr) {
+  ele = $(containerType + ":contains('" + mustHaveStr + "'):contains('" + targetStr + "')").last()
+  if (ele.length > 0) {
+    $(ele).html(ele.html().replace(targetStr, newStr))
+  } 
+}

@@ -1,7 +1,7 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      <a href="https://cert.bocatc.org/bocdevssa/sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_APP&p_cust_id=' || :cust_id || '">Apply for Exam (step 2 of 2)</a>
+      <a href="sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_APP&p_cust_id=' || :cust_id || '">Apply for Exam (step 2 of 2)</a>
     </div>
   </div>
   <div class="col s2">
@@ -11,14 +11,15 @@ select '<div class="boc-todo-row row">
   </div>
 </div>'
 from dual
-where exists (
+where (
+  exists (
   SELECT 1
   FROM SBM_SUBMITTAL s
-  INNER JOIN CRT_CUST_MAST m ON m.cust_id=s.primary_cust_id
-  WHERE s.primary_cust_id = :cust_id
-  AND m.cert_ty='ATHLETIC_TRAINER'
-  AND s.collection_id = 'AT_INITIAL_APP'
+  WHERE s.collection_id = 'AT_INITIAL_APP'
   AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('IN_PROCESS', 'CHECKOUT', 'AWAITING_PAYMENT')
+  ) AND not exists (
+    SELECT 1 FROM CRT_CUST_MAST ccm WHERE cust_id = :cust_id
+  )
 )
  OR EXISTS (
   SELECT 1
