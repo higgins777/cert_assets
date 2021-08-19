@@ -1,10 +1,10 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      Pay Late Fee
+      <a href="https://cert.bocatc.org/bocdevssa/wkfinstantiation.instantiate?p_workflow=ECC_UPDATE&p_event_id=&p_cust_id=' || :cust_id || '">Upload Emergency Cardiac Care</a>
     </div>
     <div class="boc-todo-date">
-      Payment deadline: 12/31/2021 11:59pm CT
+      Must be current and valid
     </div>
   </div>
   <div class="col s2">
@@ -17,9 +17,12 @@ from dual
 where exists (
   SELECT 1
   FROM CRT_CUST_MAST m
-  INNER JOIN MEM_SGP_MAST msm ON msm.cust_id = :cust_id
   WHERE m.cust_id = :cust_id
     AND m.cert_ty = 'ATHLETIC_TRAINER'
-    AND m.level_id IN ('EXPIRED_REACTIVATE', 'CERTIFIED')
-    AND msm.paid_thru_dt = '12/31/2020'
+    AND m.level_id IN ('EXAM_ELIGIBLE')
+) AND NOT EXISTS (
+  SELECT 1 FROM CEN_CUST_TX tx 
+  WHERE tx.cust_id= :cust_id
+  AND tx.category_cd = 'ECC'
+  AND tx.end_dt > SYSDATE 
 )

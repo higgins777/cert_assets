@@ -17,12 +17,12 @@ from dual
 where exists (
   SELECT 1
   FROM CRT_CUST_MAST m
-  INNER JOIN CEN_CUST_TX tx ON m.cust_id=tx.cust_id
   WHERE m.cust_id = :cust_id
     AND m.cert_ty = 'ATHLETIC_TRAINER'
-    AND m.level_id IN ('EXAM_ELIGIBLE', 'CERTIFICATION_ELIGIBLE', 'CERTIFIED')
-    AND (
-      tx.category_cd <> 'ECC'
-      AND tx.end_dt > SYSDATE 
-    )
+    AND m.level_id IN ('CERTIFICATION_ELIGIBLE', 'CERTIFIED')
+) AND NOT EXISTS (
+  SELECT 1 FROM CEN_CUST_TX tx 
+  WHERE tx.cust_id= :cust_id
+  AND tx.category_cd = 'ECC'
+  AND tx.end_dt > SYSDATE 
 )

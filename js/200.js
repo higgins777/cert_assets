@@ -4,6 +4,16 @@ $(document).ready(function(){
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2020', '12/31/2021')
 });
 
+// Searches for a containerType that has the mustHaveStr AND the targetStr, and then replaces all targetStr occurrences with newStr
+// Two selectors must be used as the target the lowest level shared container. Selecting based off one criteria could yield two separate tables, instead of their shared parent.
+// Strings should always be copied from the element inspector, as the rendered string does not match the DOM's (see January   01 with 3 spaces)
+function replaceElementsStr(containerType, mustHaveStr, targetStr, newStr) {
+  ele = $(containerType + ":contains('" + mustHaveStr + "'):contains('" + targetStr + "')").last()
+  if (ele.length > 0) {
+    $(ele).html(ele.html().replace(targetStr, newStr))
+  } 
+}
+
 function create_menu() {
   var menu_nav = $("#BOCMenuNavLinks")
 
@@ -23,12 +33,3 @@ function create_menu() {
 
 }
 
-
-// Searches for a containerType that has the mustHaveStr, and then replaces all targetStr with newStr
-// YOU MUST USE TWO SELECTORS TO FIND THE LOWEST ELEMENT CONTAINING BOTH THE mustHaveStr and targetStr
-function replaceElementsStr(containerType, mustHaveStr, targetStr, newStr) {
-  ele = $(containerType + ":contains('" + mustHaveStr + "'):contains('" + targetStr + "')").last()
-  if (ele.length > 0) {
-    $(ele).html(ele.html().replace(targetStr, newStr))
-  } 
-}
