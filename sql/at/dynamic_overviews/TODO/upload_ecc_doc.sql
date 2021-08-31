@@ -1,7 +1,7 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      <a href="https://cert.bocatc.org/bocdevssa/wkfinstantiation.instantiate?p_workflow=ECC_UPDATE&p_event_id=&p_cust_id=' || :cust_id || '">Upload Emergency Cardiac Care</a>
+      <a href="wkfinstantiation.instantiate?p_workflow=ECC_UPDATE&p_event_id=&p_cust_id=' || :cust_id || '">Upload Emergency Cardiac Care</a>
     </div>
     <div class="boc-todo-date">
       Must be current and valid
