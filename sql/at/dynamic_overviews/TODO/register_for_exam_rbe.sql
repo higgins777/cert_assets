@@ -1,7 +1,7 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      <a href="sbmssamysubmittals.display_page?p_collection_id=AT_INITIAL_EXAM&p_cust_id=' || :cust_id || '">Register for Exam</a>
+      <a href="sbmssamysubmittals.display_page?p_collection_id=AT_REINSTATE_EXAM&p_cust_id=' || :cust_id || '">Register for Exam</a>
     </div>
     <div class="boc-todo-date">October registration window: 9/10-9/20</div>
   </div>
@@ -30,10 +30,10 @@ AND NOT EXISTS (
   SELECT 1
   FROM SBM_SUBMITTAL s
   WHERE s.primary_cust_id = :cust_id
-  AND s.collection_id = 'AT_INITIAL_EXAM'
+  AND s.collection_id = 'AT_REINSTATE_EXAM'
   AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('EXAM_REGISTERED')
 )
-AND NOT EXISTS (
+AND EXISTS (
 select 'X' from CRT_CUST_PERIOD p
 where p.cust_id = :cust_id
 and p.level_id IN ('EXPIRED_REINSTATE','EXPIRED_RBE')

@@ -1,11 +1,19 @@
 $(document).ready(function(){
   create_menu()
+  update_login_placeholder()
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2020', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2020', '12/31/2021')
 
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2021', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2021', '12/31/2021')
 });
+
+function update_login_placeholder() {
+  var input = $("#P101_USERNAME")
+  if (input.length > 0) {
+    input.attr("placeholder", "Username (typically your email)");
+  }
+}
 
 // Searches for a containerType that has the mustHaveStr AND the targetStr, and then replaces all targetStr occurrences with newStr
 // Two selectors must be used as the target the lowest level shared container. Selecting based off one criteria could yield two separate tables, instead of their shared parent.

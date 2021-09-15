@@ -32,5 +32,5 @@ where exists (
     AND m.cert_ty = 'ATHLETIC_TRAINER'
     AND m.level_id IN ('EXPIRED_REACTIVATE', 'CERTIFIED')
     AND msm.paid_thru_dt = '12/31/2021'
-    AND msol.amount = 55
+    AND arboxilib.invoicebalance ((mso.MEMB_SERNO),'MEM')  IN  (55)
 )
