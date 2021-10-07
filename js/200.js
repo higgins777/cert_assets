@@ -14,6 +14,12 @@ $(document).ready(function(){
 // });
 
 function expand_school_codes() {
+  $("[headers^=C6906227190725890]").each(function() {
+    var t1 = $(this).text().replace("-B", "-B (Bachelor's)");
+    t1 = t1.replace("-M", "-M (Master's)");
+    $(this).text(t1);
+  })
+
   $("[headers^=C7266359656361870]").each(function() {
     var t1 = $(this).text().replace("-B", "-B (Bachelor's)");
     t1 = t1.replace("-M", "-M (Master's)");
