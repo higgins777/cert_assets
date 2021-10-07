@@ -8,6 +8,19 @@ $(document).ready(function(){
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2021', '12/31/2021')
 });
 
+
+$(document).ajaxComplete(function () {
+  expand_school_codes();
+});
+
+function expand_school_codes() {
+  $("[headers^=C7266359656361870]").each(function() {
+    var t1 = $(this).text().replace("-B", "-B (Bachelor's)");
+    t1 = t1.replace("-M", "-M (Master's)");
+    $(this).text(t1);
+  })
+}
+
 function update_login_placeholder() {
   var input = $("#P101_USERNAME")
   if (input.length > 0) {
