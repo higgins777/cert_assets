@@ -3,15 +3,15 @@ $(document).ready(function(){
   update_login_placeholder()
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2020', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2020', '12/31/2021')
-
+  expand_school_codes();
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2021', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2021', '12/31/2021')
 });
 
 
-$(document).ajaxComplete(function () {
-  expand_school_codes();
-});
+// $(document).ajaxComplete(function () {
+//   expand_school_codes();
+// });
 
 function expand_school_codes() {
   $("[headers^=C7266359656361870]").each(function() {
