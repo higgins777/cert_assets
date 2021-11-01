@@ -1,12 +1,12 @@
 select '<div class="boc-todo-row row">
   <div class="col s10">
     <div class="boc-todo-action">
-      <a href=" sbmssamysubmittals.display_page?p_collection_id=AT_MAINTAIN_APP&p_cust_id=' || :cust_id || '">
+      <a href="sbmssamysubmittals.display_page?p_collection_id=AT_MAINTAIN_APP&p_cust_id=' || :cust_id || '">
         Enter/Report CE Activity (25 CEUs Due)
       </a>
     </div>
     <div class="boc-todo-date">
-      Due by 12/31/2021
+      Reporting deadline: 12/31/2021 11:59pm CT
     </div>
   </div>
   <div class="col s2">
@@ -40,7 +40,8 @@ where exists (
     FROM SBM_SUBMITTAL s
     WHERE s.primary_cust_id = :cust_id
     AND s.collection_id = 'AT_MAINTAIN_APP'
-    AND wkfcfglib.getcurrentstate(s.wkf_serno) = 'COMPLETE') 
+    AND wkfcfglib.getcurrentstate(s.wkf_serno) IN ('COMPLETE_AUDIT_SELECTED', 'COMPLETE') 
+    )
   ) 
   OR 
   (EXISTS
