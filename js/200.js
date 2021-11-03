@@ -17,7 +17,8 @@ $(document).ready(function(){
 // });
 
 function apAnnualReportHideText() {
-  if ($("#ap-initial-app-awaiting-pymt").size() > 0) {
+  
+  if ($("#ap-initial-app-awaiting-pymnt").size() > 0) {
     $("#ap-annual-report-paid").addClass('hide-it')
   }
 }
