@@ -2,8 +2,7 @@ $(document).ready(function(){
   create_menu()
   update_login_placeholder()
   addCreatedToSubmittalTable()
-  apAnnualReportHideText()
-
+  
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2020', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2020', '12/31/2021')
   expand_school_codes();
@@ -12,9 +11,10 @@ $(document).ready(function(){
 });
 
 
-// $(document).ajaxComplete(function () {
-//   expand_school_codes();
-// });
+$(document).ajaxComplete(function () {
+  apAnnualReportHideText()
+  // expand_school_codes();
+});
 
 function apAnnualReportHideText() {
   
