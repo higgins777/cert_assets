@@ -2,7 +2,8 @@ $(document).ready(function(){
   create_menu()
   update_login_placeholder()
   addCreatedToSubmittalTable()
-  
+  apAnnualReportHideText()
+
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2020', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2020', '12/31/2021')
   expand_school_codes();
@@ -15,7 +16,14 @@ $(document).ready(function(){
 //   expand_school_codes();
 // });
 
+function apAnnualReportHideText() {
+  if ($("#ap-initial-app-awaiting-pymt").size() > 0) {
+    $("#ap-annual-report-paid").addClass('hide-it')
+  }
+}
 
+// Takes a serialized string of "id1--date1::id2--date2::..." into a map.
+// Iterate over HTML table and insert the date into each IDs corresponding row.
 function addCreatedToSubmittalTable() {
   if ($("#submittal_created_dates").size() > 0) {
     $("th.aaSbmNumber").parent().children().eq(4).after("<th>Created Date</th>")

@@ -1,4 +1,6 @@
-
+.hide-it {
+  display: none;
+}
 
 /* Start Menu CSS */
 .displayMenuNavLinks {
