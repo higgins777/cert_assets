@@ -22,7 +22,7 @@ where (
   ) AND not exists (
     SELECT 1 FROM CRT_CUST_MAST ccm WHERE cust_id = :cust_id
   ) AND exists (
-    SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :cust_id  AND FUNCTION_CD='STUDENT'
+    SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :cust_id  AND FUNCTION_CD='STUDENT' AND EMPLOYER_ID <> 'INTERN'
   )
 )
  OR EXISTS (
@@ -31,4 +31,7 @@ where (
   WHERE ccm.cust_id = :cust_id
   AND ccm.cert_ty='ATHLETIC_TRAINER'
   AND ccm.level_id = ('EXAM_ELIGIBLE_EXPIRED')
+  AND not exists (
+    SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :cust_id AND FUNCTION_CD='STUDENT' AND EMPLOYER_ID='INTERN'
+  )
 )

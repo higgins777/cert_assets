@@ -7,8 +7,8 @@ select '<div class="boc-upcoming-row row">
   <div class="col s2">
       <!-- <a class="tooltipped" data-position="bottom" data-tooltip="Do your CEUs">
         <i class="boc-upcoming-info material-icons">info</i>
-      </a> -->
-  </div>
+        </a> -->
+    </div>
 </div>'
 from dual
 where exists (
@@ -19,4 +19,8 @@ where exists (
   AND s.collection_id = 'AT_INITIAL_APP'
   AND e.function_cd = 'STUDENT'
   AND wkfcfglib.getcurrentstate(s.wkf_serno) in ('PENDING','PROGRAM_CONFIRM','BOC_CONFIRM','BOC_CONFIRM_NMI', NULL)
+) AND NOT EXISTS (
+  SELECT 1 FROM CEN_CUST_EMP WHERE EMPLOYEE_ID = :cust_id  AND FUNCTION_CD='STUDENT' AND EMPLOYER_ID='INTERN'
+) AND NOT EXISTS (
+  SELECT 1 FROM CRT_CUST_MAST WHERE CUST_ID = :cust_id
 )
