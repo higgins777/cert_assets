@@ -1,5 +1,5 @@
 body form[action="arssainvpay.pay_save"] #aaSubmitButton {
-  background-color: none !important;
+  background-color: transparent !important;
 }
 
 
