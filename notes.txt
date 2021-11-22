@@ -24,3 +24,27 @@ I think I am missing todo items for provider
 
 PAID MEMBERSHIPS
 MEM_SGP_MAST PAID THRU DATE, must USE BOCATC
+
+BOC356526
+060102461
+
+CERTIFIED_PERIOD_NON_FUTURE
+SBM Code 
+select 'Y' from dual
+where exists (select 1 from crt_cust_mast m, crt_cust_period p
+  where m.cust_id = 'BOC356526'
+  and m.period_serno = p.period_serno 
+  and m.spec_ty = 'ATHLETIC_TRAINER'
+  and m.level_id in ('CERTIFIED')
+  and trunc(sysdate) >= trunc(p.start_dt)
+)
+
+
+select 'Y' from dual
+where exists (select 1 from crt_cust_mast m, crt_cust_period p
+  where m.cust_id = :cust_id
+  and m.period_serno = p.period_serno
+  and m.spec_ty = :subcollection_cd
+  and m.level_id in ('CERTIFIED')
+  and trunc(p.start_dt) <= '1/1/2021'
+)

@@ -147,6 +147,11 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 .boc-todo-row {
   border-bottom: 1px solid #3B8FC5;
 }
+
+.boc-todo-row:hover {
+  background-color: #DEDEDE;
+}
+
 .boc-upcoming-info {
   font-size: 3rem !important;
   color: #FF8772;
