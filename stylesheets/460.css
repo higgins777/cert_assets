@@ -150,6 +150,7 @@ pre { font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; fon
 
 .boc-todo-row:hover {
   background-color: #DEDEDE;
+  text-decoration: underline;
 }
 
 .boc-upcoming-info {
