@@ -21,7 +21,7 @@ body form[action="arssainvpay.pay_save"] #aaSubmitButton {
 
 .displayMenuNavLinks a {
   color: white !important;
-  font-size: 1.6rem;
+  font-size: 1.4rem !important;
 }
 
 .displayMenuNavLinks li:hover {
