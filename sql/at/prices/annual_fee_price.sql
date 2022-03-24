@@ -155,13 +155,13 @@ AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
 );
 commit;
 
-else wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_NOM'
-);
+-- else wkfcfglib.setqualifiervalue (
+--   p_wkf_serno = > :wkf_serno,
+--   p_qualifier_id = > 'PRICE_CD',
+--   p_qualifier_value = > 'NATA_NOM'
+-- );
 
-commit;
+-- commit;
 
 end if;
 
