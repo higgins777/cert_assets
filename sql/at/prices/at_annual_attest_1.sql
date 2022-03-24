@@ -1,5 +1,3 @@
-/* Questions for Allen - Can they even see this if they are not an ATC? Do I need to confirm that with a cursor? */
-
 declare cursor c_member_check is
 select
   attribute_cd
@@ -28,7 +26,7 @@ where
 
 
 /* v_member_check = YES */
-/* v_collection_type = 'AT_MAINTAIN_APP' */
+/* v_collection_type = 'AT_ANNUAL_ATTEST_1' */
 v_member_check cen_cust_attrdtl.attribute_cd % type;
 v_collection_type sbm_submittal.collection_id % type;
 v_ose_level_id crt_cust_mast.level_id % type;
@@ -45,13 +43,13 @@ open c_ose_level_id;
   fetch c_ose_level_id into v_ose_level_id;
 close c_ose_level_id;
 
-/* All Cases require v_collection_type=AT_MAINTAIN_APP && a Certified or maybe Expired* ATC
+/* All Cases require v_collection_type=AT_ANNUAL_ATTEST_1 && a Certified or maybe Expired* ATC
 
 /* Case 1
-Condition: collection=AT_MAINTAIN_APP && member=YES
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=YES
 Result: NATA_MEMBER ($39)
 */
-if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+if nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES' 
 and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
@@ -61,13 +59,13 @@ and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 2
-Condition: collection=AT_MAINTAIN_APP && member=YES && TODAY > 12/31/2023
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=YES && TODAY > 12/31/2022
 Result: NATA_MEMBER ($59)
 */
-else if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES' 
 and nvl(v_ose_level_id, 'N') = 'N'
-AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
+AND SYSDATE() > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
   p_qualifier_id = > 'PRICE_CD',
   p_qualifier_value = > 'NATA_MEMBER_LATE'
@@ -75,10 +73,10 @@ AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 3
-Condition: collection=AT_MAINTAIN_APP && member=YES && ose_level_id='CERTIFIED
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=YES && ose_level_id='CERTIFIED
 Result: NATA_MEMBER ($69)
 */
-else if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES'
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
@@ -88,13 +86,13 @@ and nvl(v_ose_level_id, 'N') = 'CERTIFIED' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 4
-Condition: collection=AT_MAINTAIN_APP && member=YES && ose_level_id='CERTIFIED && TODAY > 12/31/2023
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=YES && ose_level_id='CERTIFIED && TODAY > 12/31/2022
 Result: NATA_MEMBER ($89)
 */
-else if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES'
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED' 
-AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
+AND SYSDATE() > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
   p_qualifier_id = > 'PRICE_CD',
   p_qualifier_value = > 'NATA_MEMBER_OS_LATE'
@@ -102,10 +100,10 @@ AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 5
-Condition: collection=AT_MAINTAIN_APP && member=NO
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=NO
 Result: NATA_MEMBER ($55)
 */
-if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+if nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'NO' 
 and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
@@ -115,13 +113,13 @@ and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 6
-Condition: collection=AT_MAINTAIN_APP && member=NO && TODAY > 12/31/2023
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=NO && TODAY > 12/31/2022
 Result: NATA_MEMBER ($75)
 */
-else if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'NO' 
 and nvl(v_ose_level_id, 'N') = 'N' 
-AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
+AND SYSDATE() > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
   p_qualifier_id = > 'PRICE_CD',
   p_qualifier_value = > 'NATA_NOM_LATE'
@@ -129,10 +127,10 @@ AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 7
-Condition: collection=AT_MAINTAIN_APP && member=NO && ose_level_id='CERTIFIED
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=NO && ose_level_id='CERTIFIED
 Result: NATA_MEMBER ($86)
 */
-else if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'NO'
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
@@ -142,13 +140,13 @@ and nvl(v_ose_level_id, 'N') = 'CERTIFIED' then wkfcfglib.setqualifiervalue (
 commit;
 
 /* Case 8
-Condition: collection=AT_MAINTAIN_APP && member=NO && ose_level_id='CERTIFIED && TODAY > 12/31/2023
+Condition: collection=AT_ANNUAL_ATTEST_1 && member=NO && ose_level_id='CERTIFIED && TODAY > 12/31/2022
 Result: NATA_MEMBER ($89)
 */
-else if nvl(v_collection_type, 'N') = 'AT_MAINTAIN_APP'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'NO'
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED' 
-AND SYSDATE() > '12/31/2023' then wkfcfglib.setqualifiervalue (
+AND SYSDATE() > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno = > :wkf_serno,
   p_qualifier_id = > 'PRICE_CD',
   p_qualifier_value = > 'NATA_NOM_OS_LATE'
