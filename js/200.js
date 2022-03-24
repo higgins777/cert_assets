@@ -8,6 +8,9 @@ $(document).ready(function(){
   expand_school_codes();
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', ' January   01, 2021', ' December 31, 2021')
   replaceElementsStr('table', 'Certification Maintenance Fee (Renewal)', '01/01/2021', '12/31/2021')
+
+  replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2020', '1/1/2020-12/31/2020')
+  replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2021', '1/1/2021-12/31/2021')
 });
 
 
