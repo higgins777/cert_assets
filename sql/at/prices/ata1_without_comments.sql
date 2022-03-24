@@ -79,7 +79,7 @@ AND SYSDATE() > '12/31/2022' then wkfcfglib.setqualifiervalue (
 );
 commit;
 
-if nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
+elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'NO' 
 and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
   p_wkf_serno => :wkf_serno,
