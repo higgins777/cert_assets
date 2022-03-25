@@ -53,9 +53,9 @@ if nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES'
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED'
 AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_MEMBER_OS_LATE'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_MEMBER_OS_LATE'
 );
 commit;
 
@@ -63,9 +63,9 @@ elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES'
 and nvl(v_ose_level_id, 'N') = 'N'
 AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_MEMBER_LATE'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_MEMBER_LATE'
 );
 commit;
 
@@ -73,9 +73,9 @@ elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') in ('NO', 'INVALID')
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED'
 AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_NOM_OS_LATE'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_NOM_OS_LATE'
 );
 commit;
 
@@ -83,49 +83,47 @@ elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') in ('NO', 'INVALID')
 and nvl(v_ose_level_id, 'N') = 'N'
 AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_NOM_LATE'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_NOM_LATE'
 );
 commit;
 
 elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES'
 and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_MEMBER'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_MEMBER'
 );
 commit;
 
 elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') = 'YES'
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_MEMBER_OS'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_MEMBER_OS'
 );
 commit;
 
 elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') in ('NO', 'INVALID')
 and nvl(v_ose_level_id, 'N') = 'N' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_NOM'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_NOM'
 );
 commit;
 
 elsif nvl(v_collection_type, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_member_check, 'NO') in ('NO', 'INVALID')
 and nvl(v_ose_level_id, 'N') = 'CERTIFIED' then wkfcfglib.setqualifiervalue (
-  p_wkf_serno = > :wkf_serno,
-  p_qualifier_id = > 'PRICE_CD',
-  p_qualifier_value = > 'NATA_NOM_OS'
+  p_wkf_serno => :wkf_serno,
+  p_qualifier_id => 'PRICE_CD',
+  p_qualifier_value => 'NATA_NOM_OS'
 );
 commit;
-
-
 
 end if;
 
