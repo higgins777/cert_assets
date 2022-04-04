@@ -47,6 +47,18 @@ function addCreatedToSubmittalTable() {
   }
 }
 
+function changeCeFormDates() {
+  isPending = $("#aaSbmHeaderSubmittalStatus").text() == '\nStatus: Pending\n\n'
+  isFiftyDue = $("#P2529_DUE_DISPLAY").text() == 'Total CEUs Due: 50'
+  reportingPeriod = $("#P2529_PERIOD_DISPLAY")
+  dateEndsCorrectly = reportingPeriod.text().includes("12/31/2023")
+
+  if (isPending && isFiftyDue && dateEndsCorrectly) {
+    reportingPeriod.html("Reporting Period: 1/1/2022 - 12/31/2023");
+  }
+
+}
+
 function expand_school_codes() {
   $("[headers^=C6906227190725890]").each(function() {
     var t1 = $(this).text().replace("-B", "-B (Bachelor's)");

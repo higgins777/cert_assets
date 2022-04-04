@@ -61,7 +61,7 @@ if nvl(v_coll_ty, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_mem, 'NO') = 'YES'
 and nvl(v_os_lvl, 'N') = 'CERTIFIED'
 and nvl(v_os_crt_dt, '12/12/2999') < '1/1/2022'
-AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
+AND trunc(SYSDATE) > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno => :wkf_serno,
   p_qualifier_id => 'PRICE_CD',
   p_qualifier_value => 'NATA_MEMBER_OS_LATE'
@@ -71,7 +71,7 @@ commit;
 elsif nvl(v_coll_ty, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_mem, 'NO') = 'YES'
 and (nvl(v_os_lvl, 'N') = 'N' OR nvl(v_os_crt_dt, '1/1/1900') >= '1/1/2022')
-AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
+AND trunc(SYSDATE) > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno => :wkf_serno,
   p_qualifier_id => 'PRICE_CD',
   p_qualifier_value => 'NATA_MEMBER_LATE'
@@ -82,7 +82,7 @@ elsif nvl(v_coll_ty, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_mem, 'NO') in ('NO', 'INVALID')
 and nvl(v_os_lvl, 'N') = 'CERTIFIED'
 and nvl(v_os_crt_dt, '12/12/2999') < '1/1/2022'
-AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
+AND trunc(SYSDATE) > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno => :wkf_serno,
   p_qualifier_id => 'PRICE_CD',
   p_qualifier_value => 'NATA_NOM_OS_LATE'
@@ -92,7 +92,7 @@ commit;
 elsif nvl(v_coll_ty, 'N') = 'AT_ANNUAL_ATTEST_1'
 and nvl(v_mem, 'NO') in ('NO', 'INVALID')
 and (nvl(v_os_lvl, 'N') = 'N' OR nvl(v_os_crt_dt, '1/1/1900') >= '1/1/2022')
-AND trunc(SYSDATE) > '12/31/2021' then wkfcfglib.setqualifiervalue (
+AND trunc(SYSDATE) > '12/31/2022' then wkfcfglib.setqualifiervalue (
   p_wkf_serno => :wkf_serno,
   p_qualifier_id => 'PRICE_CD',
   p_qualifier_value => 'NATA_NOM_LATE'
