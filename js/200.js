@@ -12,7 +12,7 @@ $(document).ready(function(){
   
   replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2020', '1/1/2020-12/31/2020')
   replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2021', '1/1/2021-12/31/2021')
-  // changeCeFormDates();
+  changeCeFormDates();
 });
 
 
@@ -51,16 +51,16 @@ function addCreatedToSubmittalTable() {
 // add Start is equal or greater than 12/31/2021
 // BOC389915 - would like to show 6/8/2021 instead of 1/1/2022 if possible
 function changeCeFormDates() {
-  // isPending = $("#aaSbmHeaderSubmittalStatus").text() == '\nStatus: Pending\n\n'
-  // isFiftyDue = $("#P2529_DUE_DISPLAY").text() == 'Total CEUs Due: 50'
-  // reportingPeriod = $("#P2529_PERIOD_DISPLAY")
-  // dateEndsCorrectly = reportingPeriod.text().includes("12/31/2023")
-  // startDate = reportingPeriod.text().split(" - ")[0]
-  // startDateCorrectly = (startDate.includes("2022") || startDate.includes("2023") || startDate.includes("12/31/2021"))
+  isPending = $("#aaSbmHeaderSubmittalStatus").text() == '\nStatus: Pending\n\n'
+  isFiftyDue = $("#P2529_DUE_DISPLAY").text() == 'Total CEUs Due: 50'
+  reportingPeriod = $("#P2529_PERIOD_DISPLAY")
+  dateEndsCorrectly = reportingPeriod.text().includes("12/31/2023")
+  startDate = reportingPeriod.text().split(" - ")[0]
+  startDateCorrectly = (startDate.includes("2022") || startDate.includes("2023") || startDate.includes("12/31/2021"))
 
-  // if (isPending && isFiftyDue && dateEndsCorrectly && startDateCorrectly) {
-  //   reportingPeriod.html("Reporting Period: 1/1/2022 - 12/31/2023");
-  // }
+  if (isPending && isFiftyDue && dateEndsCorrectly && startDateCorrectly) {
+    reportingPeriod.html("Reporting Period: 1/1/2022 - 12/31/2023");
+  }
 }
 
 function expand_school_codes() {
