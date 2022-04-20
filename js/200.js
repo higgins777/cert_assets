@@ -12,7 +12,7 @@ $(document).ready(function(){
   
   replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2020', '1/1/2020-12/31/2020')
   replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2021', '1/1/2021-12/31/2021')
-  changeCeFormDates();
+  // changeCeFormDates();
 });
 
 
@@ -55,7 +55,7 @@ function changeCeFormDates() {
   isFiftyDue = $("#P2529_DUE_DISPLAY").text() == 'Total CEUs Due: 50'
   reportingPeriod = $("#P2529_PERIOD_DISPLAY")
   dateEndsCorrectly = reportingPeriod.text().includes("12/31/2023")
-  startDate = reportingPeriod.split(" - ")[0]
+  startDate = reportingPeriod.text().split(" - ")[0]
   startDateCorrectly = (startDate.includes("2022") || startDate.includes("2023") || startDate.includes("12/31/2021"))
 
   if (isPending && isFiftyDue && dateEndsCorrectly && startDateCorrectly) {
