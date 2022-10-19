@@ -15,14 +15,14 @@ $(document).ready(function(){
 
   replaceElementsStr('div', 'You do not yet have any submissions', 'You do not yet have any submissions', '')
 
-  changeNewSubmittalBtnLabel();
-
+  
   changeCeFormDates();
 });
 
 
 $(document).ajaxComplete(function () {
   apAnnualReportHideText()
+  changeNewSubmittalBtnLabel();
   // expand_school_codes();
 });
 
@@ -118,6 +118,7 @@ function create_menu() {
 }
 
 function changeNewSubmittalBtnLabel() {
-  btn_value = $("#aaFormSubmit_ATHLETIC_TRAINER").attr("value")
+  btn_value = $("#aaFormSubmit_ATHLETIC_TRAINER").attr("value");
+  $("#aaFormSubmit_ATHLETIC_TRAINER").val(btn_value.replace("Create New", "Open"))
 }
 
