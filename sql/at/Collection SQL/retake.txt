@@ -1,0 +1,11 @@
+BOC393211
+
+SQL is in Admin > Workflow > Action SQL Library
+
+Action Code: AT_EXAM_ATTEMPT_TYPE
+
+Go to customer
+Switch view to submittals
+AT103 Form - Click Create New
+Fill out the attestments, select $0 for Exam Price
+Checkout

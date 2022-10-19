@@ -70,6 +70,7 @@ v_alert_serno INTEGER;
 v_legacy cen_cust_attrdtl.attribute_cd % type;
 
 begin
+
 open c_legacy;
 fetch c_legacy into v_legacy;
 close c_legacy;
@@ -81,22 +82,23 @@ close c_collection;
 open c_exam_result;
 fetch c_exam_result into v_exam_result;
 close c_exam_result;
+
 open c_exam_fail_exists;
 fetch c_exam_fail_exists into v_exam_fail_exists;
 close c_exam_fail_exists;
+
 open c_athletic_trainer;
 fetch c_athletic_trainer into v_athletic_trainer;
 close c_athletic_trainer;
 
-if nvl(v_legacy, 'N') = 'YES'
-then sbmattrlib.insupd_sbm_attrdtl(
+if nvl(v_legacy, 'N') = 'YES' then sbmattrlib.insupd_sbm_attrdtl(
   P_SUBMITTAL_SERNO => :submittal_serno,
   P_ATTRIBUTE_TY => 'AT_EXAM_ATTEMPT',
   P_NEW_ATTRCODE => 'RETAKE'
 );
 elsif nvl(v_collection, 'N') = 'AT_INITIAL_EXAM'
-and nvl(v_exam_result, 'NO_SHOW') = 'NO_SHOW'
-and nvl(v_exam_fail_exists, 'N') = 'N' then sbmattrlib.insupd_sbm_attrdtl(
+  and nvl(v_exam_result, 'NO_SHOW') = 'NO_SHOW'
+  and nvl(v_exam_fail_exists, 'N') = 'N' then sbmattrlib.insupd_sbm_attrdtl(
   P_SUBMITTAL_SERNO => :submittal_serno,
   P_ATTRIBUTE_TY => 'AT_EXAM_ATTEMPT',
   P_NEW_ATTRCODE => 'FIRST_ATTEMPT'
@@ -108,6 +110,11 @@ and nvl(v_exam_fail_exists, 'N') = 'Y' then sbmattrlib.insupd_sbm_attrdtl(
   p_new_attrcode => 'RETAKE'
 );
 elsif nvl(v_collection, 'N') = 'AT_REINSTATE_EXAM' then sbmattrlib.insupd_sbm_attrdtl(
+  P_SUBMITTAL_SERNO => :submittal_serno,
+  P_ATTRIBUTE_TY => 'AT_EXAM_ATTEMPT',
+  P_NEW_ATTRCODE => 'RETAKE'
+);
+else sbmattrlib.insupd_sbm_attrdtl (
   P_SUBMITTAL_SERNO => :submittal_serno,
   P_ATTRIBUTE_TY => 'AT_EXAM_ATTEMPT',
   P_NEW_ATTRCODE => 'RETAKE'
