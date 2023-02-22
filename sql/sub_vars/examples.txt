@@ -1,0 +1,26 @@
+# Conditions
+All conditions require
+  a. CERTIFIED with expiration = 12/31/2023
+  b. EXPIRED_REACTIVATE with expiration = 02/28/24
+  c. CERTIFIED_SINCE_DT < 1/1/2023
+
+SV OBJECT_ID: 2022_CERT_DUE
+Example: 000060230
+1. 2022 is not paid, 2023 is not paid
+-> Show 2022 OVERDUE
+
+Example: Nathan Burns  090402137
+2. 2022 is paid, 2023 is not paid
+-> Show 2022 PAID
+-> Show 2023 NOT PAID
+
+Example: 080302133
+3. 2022 is paid, 2023 is paid, CE not complete
+-> Show 2022 PAID
+-> Show 2023 PAID
+
+Danny Nguyen BOC381561
+4. 2022 paid, 2023 paid, CE complete
+-> 'All 2022-2023 CE and fee requirements have been completed
+
+5.  

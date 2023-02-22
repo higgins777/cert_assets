@@ -1,0 +1,55 @@
+Category EBP to A Update (Friday this week or some time next week if possible)
+Provider Criteria:
+CERT_TY = APPROVED_PROVIDER
+SPEC_TY = APPROVED_PROVIDER
+LEVEL_ID = ACTIVE or ACTIVE_JA or ANNUAL_REPORT
+STATUS_CD = ACTIVE or PROBATION
+END_DT = 12/31/2022
+CURRENT_FL = Y
+Program Criteria:
+AP_ACTIVE = ACTIVE
+AP_CATEGORY = EBP
+Offering Criteria:
+AP_O_ACTIVE = ACTIVE
+START_DT <= 03/01/2022
+END_DT >= 03/01/2022
+Update #1:
+For any offerings meeting above criteria, export provider/program/offering details (including AP_C_DELIVERY) so that we can create a duplicate Category A program and a new Category A offering with an offering start date of 03/01/2022 via conversion (do not proceed to update #2 until export/conversion has been validated)
+Update #2:
+For any offerings meeting above criteria, update end date for original EBP offering to 02/28/2022
+
+
+Category EBP to A Update (Friday this week or some time next week if possible)
+Provider Criteria:
+CERT_TY = APPROVED_PROVIDER
+SPEC_TY = APPROVED_PROVIDER
+LEVEL_ID = ACTIVE or ACTIVE_JA or ANNUAL_REPORT
+STATUS_CD = ACTIVE or PROBATION
+END_DT = 12/31/2022
+CURRENT_FL = Y
+Program Criteria:
+AP_ACTIVE = ACTIVE
+AP_CATEGORY = EBP
+Offering Criteria:
+AP_O_ACTIVE = ACTIVE
+START_DT > 03/01/2022
+END_DT >= 03/01/2022
+Update #1:
+For any offerings meeting above criteria, export provider/program/offering details (including AP_C_DELIVERY) so that we can create a duplicate Category A program and a new Category A offering with the same future dates via conversion (do not proceed to update #2 until export/conversion has been validated)
+Update #2:
+For any offerings meeting above criteria, change EBP offering status to INACTIVE
+Program/Offering Tables
+CEN_CUST_RELA (provider/program association)
+CEN_CUST_MAST (programs) – “parents”
+CEN_CUST_ATTRDTL (program attributes)
+CEN_CUST_TX (offerings/dates) – “children”
+CEN_CUST_TX_ATTRDTL (offering attributes)
+ 
+
+THE SELECTION
+SELECT * from crt_cust_mast ccm
+INNER JOIN CEN_CUST_RELA rela ON rela.CUST_ID=ccm.cust_id
+INNER JOIN CEN_CUST_ATTRDTL cca ON rela.related_to_id=cca.cust_id AND cca.attribute_ty='AP_CATEGORY' AND cca.ATTRIBUTE_CD='EBP'
+INNER JOIN CEN_CUST_ATTRDTL cca2 ON rela.related_to_id=cca2.cust_id AND cca2.attribute_ty='AP_ACTIVE' AND cca2.ATTRIBUTE_CD='ACTIVE'
+INNER JOIN CEN_CUST_TX tx ON tx.cust_id=rela.related_to_id
+LEFT JOIN CEN_CUST_TX_ATTRDTL cctx_attr ON tx.TX_SERNO=cctx_attr.TX_SERNO

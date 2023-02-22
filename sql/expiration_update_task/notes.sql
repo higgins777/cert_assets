@@ -32,7 +32,6 @@ SELECT * FROM CEN_CUST_MAST WHERE CUST_ID NOT IN ('P100', 'P8441')
 # THE SELECTION
 SELECT * from crt_cust_mast ccm
 INNER JOIN CEN_CUST_RELA rela ON rela.CUST_ID=ccm.cust_id
-INNER JOIN CEN_CUST_ATTRDTL cca ON rela.related_to_id=cca.cust_id AND cca.attribute_ty='AP_CATEGORY' AND cca.ATTRIBUTE_CD='CAT_A'
+INNER JOIN CEN_CUST_ATTRDTL cca ON rela.related_to_id=cca.cust_id AND cca.attribute_ty='AP_CATEGORY' AND cca.ATTRIBUTE_CD='CAT_EBP'
 INNER JOIN CEN_CUST_ATTRDTL cca2 ON rela.related_to_id=cca2.cust_id AND cca2.attribute_ty='AP_ACTIVE' AND cca2.ATTRIBUTE_CD='ACTIVE'
 INNER JOIN CEN_CUST_TX tx ON tx.cust_id=rela.related_to_id
-WHERE ccm.cust_id='P100'
