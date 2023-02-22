@@ -1,7 +1,7 @@
 SELECT
   NVL2(
     ccm.cust_id,
-    'All 2022-2023 CE and fee requirements have been completed',
+    '<br><br><strong><font color="#6FBD45">All 2022-2023 CE and fee requirements have been completed</font></strong>',
     ''
   )
 FROM

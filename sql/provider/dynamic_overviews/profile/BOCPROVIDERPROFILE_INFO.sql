@@ -104,28 +104,8 @@ from
       and spec_ty = 'APPROVED_PROVIDER'
       and level_id in ('ACTIVE', 'ANNUAL_REPORT')
       and rownum < 2
-    union
-    select
-      '<div id="BOCProviderProfileStatus" class="BOCProviderProfileContent">' || '<label for="BOCProviderProfileStatusText" id="BOCProviderProfileStatusLabel">Expiration Date: </label>' || '<span id="BOCProviderProfileStatusText">' ||(
-        select
-          case
-            when m.level_id = 'EXPIRED' then to_char(p.start_dt, 'MM/DD/YYYY')
-            else to_char(current_exp_date, 'MM/DD/YYYY')
-          end
-        from
-          crt_cust_mast m,
-          crt_cust_period p
-        where
-          m.period_serno = p.period_serno
-          and p.cust_id = bocdashboardlib.get_provider(:cust_id)
-          and p.cert_ty = 'APPROVED_PROVIDER'
-          and p.spec_ty = 'APPROVED_PROVIDER'
-          and p.level_id in ('ACTIVE', 'ANNUAL_REPORT', 'EXPIRED')
-          and rownum < 2
-      ) || '</span>' || '</div>' col_data,
-      5 sort_order
-    from
-      dual
   )
-order by
-  sort_order
+
+
+
+  <br><br><strong>2023 Cert Maintenance Fee:<br><font color="#FF8772">DUE</font></strong>
