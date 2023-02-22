@@ -12,12 +12,17 @@ $(document).ready(function(){
   
   replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2020', '1/1/2020-12/31/2020')
   replaceElementsStr('td', 'BOCATC - Certified', '12/31/2021-12/31/2021', '1/1/2021-12/31/2021')
+
+  replaceElementsStr('div', 'You do not yet have any submissions', 'You do not yet have any submissions', '')
+
+  
   changeCeFormDates();
 });
 
 
 $(document).ajaxComplete(function () {
   apAnnualReportHideText()
+  changeNewSubmittalBtnLabel();
   // expand_school_codes();
 });
 
@@ -110,6 +115,10 @@ function create_menu() {
     $("#boc-menu-col0").html(firstHalf);
     $("#boc-menu-col1").html(secondHalf);
   }
+}
 
+function changeNewSubmittalBtnLabel() {
+  btn_value = $("#aaFormSubmit_ATHLETIC_TRAINER").attr("value");
+  $("#aaFormSubmit_ATHLETIC_TRAINER").val(btn_value.replace("Create New", "Open"))
 }
 
