@@ -23,6 +23,7 @@ $(document).ready(function () {
 $(document).ajaxComplete(function () {
   apAnnualReportHideText()
   changeNewSubmittalBtnLabel();
+  replaceElementsStr('div', 'You do not yet have any submissions', 'You do not yet have any submissions', '')
   // expand_school_codes();
 });
 
