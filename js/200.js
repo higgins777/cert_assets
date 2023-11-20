@@ -37,7 +37,7 @@ function apAnnualReportHideText() {
 // Takes a serialized string of "id1--date1::id2--date2::..." into a map.
 // Iterate over HTML table and insert the date into each IDs corresponding row.
 function addCreatedToSubmittalTable() {
-  if ($("#submittal_created_dates").size() > 0) {
+  if ($("#submittal_created_dates").length > 0) {
       $("th.aaSbmNumber").parent().children().eq(4).after("<th>Created Date</th>")
       var pairs = $("#submittal_created_dates").text().split("::")
       var id_date_map = {}
