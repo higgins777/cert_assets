@@ -60,12 +60,12 @@ function changeCeFormDates() {
   isPending = $("#aaSbmHeaderSubmittalStatus").text() == '\nStatus: Pending\n\n'
   isFiftyDue = $("#P2529_DUE_DISPLAY").text() == 'Total CEUs Due: 50'
   reportingPeriod = $("#P2529_PERIOD_DISPLAY")
-  dateEndsCorrectly = reportingPeriod.text().includes("12/31/2023")
+  dateEndsCorrectly = reportingPeriod.text().includes("12/31/2025")
   startDate = reportingPeriod.text().split(" - ")[0]
-  startDateCorrectly = (startDate.includes("2022") || startDate.includes("2023") || startDate.includes("12/31/2021"))
+  startDateCorrectly = (startDate.includes("2024") || startDate.includes("2025") || startDate.includes("12/31/2023"))
 
   if (isPending && isFiftyDue && dateEndsCorrectly && startDateCorrectly) {
-      reportingPeriod.html("Reporting Period: 1/1/2022 - 12/31/2023");
+      reportingPeriod.html("Reporting Period: 1/1/2024 - 12/31/2025");
   }
 }
 
